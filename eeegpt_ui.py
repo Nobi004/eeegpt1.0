@@ -88,15 +88,20 @@ def main():
         st.session_state.messages.append({"role": "user","content":prompt})
 
         CUSTOM_PROMPT_TEMPLATE = """
-                Use the pieces of information provided in the context to answer user's question.
-                If you dont know the answer, just say that you dont know, dont try to make up an answer. 
-                Dont provide anything out of the given context
+            You are EEEGPT, a specialized AI for electrical and electronic engineering (EEE), trained on authoritative EEE texts. Your goal is to provide accurate, concise, and technically precise answers based solely on the provided context. Follow these guidelines:
 
-                Context: {context}
-                Question: {question}
+            1. Answer directly using the context, avoiding speculation or external information.
+            2. If the context lacks sufficient information, state: 'The provided context does not contain enough information to answer this question.'
+            3. For technical questions, include step-by-step reasoning or calculations where applicable, using LaTeX for equations (e.g., $$ V = IR $$) or code blocks for snippets (e.g., SPICE netlists).
+            4. If the question is ambiguous, briefly clarify the interpretation before answering.
+            5. Tailor the response to the user's likely expertise level (inferred from the question's complexity) while maintaining technical accuracy.
+            6. Provide relevant examples or applications from the context to enhance understanding, especially for practical EEE tasks like circuit design or power analysis.
 
-                Start the answer directly. No small talk please.
-                """
+            Context: {context}
+            Question: {question}
+
+            Answer:
+            """
         
         
 
@@ -130,7 +135,7 @@ def main():
             response = qa_chain.invoke({'query': prompt})
             result = response["result"]
             source_documents = response['source_documents']
-            result_to_show=result+"\nSource Documents:\n"+str(source_documents)
+            result_to_show=result # +"\nSource Documents:\n"+str(source_documents)
         
             print("RESULT: ", response["result"])
             print("\nSOURCE DOCUMENTS:")
