@@ -72,14 +72,14 @@ class GroqLLM(LLM):
         }
 
 def main():
-        st.markdown(
-        """
-        <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
-        <h3 style='text-align: center;'>Made by Md. Mahmudun Nobi</h3>
-        <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown(
+    """
+    <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
+    <h3 style='text-align: center;'>Made by Md. Mahmudun Nobi</h3>
+    <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
+    """,
+    unsafe_allow_html=True
+   )
     # st.title("Welcme to EEEGPT v1.0")
     # st.subheader("Made by Md. Mahmudun Nobi")
     # st.subheader("Your AI Assistant for Electrical and Electronic Engineering study.")
