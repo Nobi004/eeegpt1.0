@@ -72,7 +72,7 @@ class GroqLLM(LLM):
         }
 
 def main():
-    st.title("Welcme to EEGPT")
+    st.title("Welcme to EEEGPT")
     if 'messages' not in st.session_state:
         st.session_state.messages = []
 
