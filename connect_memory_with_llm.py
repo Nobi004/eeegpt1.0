@@ -12,7 +12,7 @@ from langchain_community.vectorstores import FAISS
 
 
 # Step 1: Setup LLM (Mistral with HuggingFace)
-# HF_TOKEN="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"
+HF_TOKEN=1234 #"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"
 # HUGGINGFACE_REPO_ID="mistralai/Mistral-7B-Instruct-v0.3"
 HUGGINGFACE_REPO_ID = "teapotai/teapotllm"  # Replace with a compatible model
 def load_llm(huggingface_repo_id):
