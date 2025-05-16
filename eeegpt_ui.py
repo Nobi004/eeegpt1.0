@@ -72,7 +72,7 @@ class GroqLLM(LLM):
         }
 
 def main():
-    st.title("Welcme to EEEGPT")
+    st.title("Welcme to EEEGPT v1.0")
     st.subheader("Made by Md. Mahmudun Nobi")
     st.subheader("Your AI Assistant for Electrical and Electronic Engineering.")
     # st.write("Ask me anything related to your studies, and I'll do my best to help you!")
