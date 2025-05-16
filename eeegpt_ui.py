@@ -128,6 +128,8 @@ def main():
                 6. If the question involves code (e.g., SPICE), provide it in a code block and describe what it does simply.
                 7. If the question is unclear, briefly state your interpretation before answering.
                 8. Keep answers concise (under 200 words) but include one practical example or application to show how the concept is used in real life.
+                9. Ans questions using some keypoints and bold the important terms.
+                10. Include a summary at the end of the answer to reinforce understanding.
 
                 Context: {context}
                 Question: {question}
