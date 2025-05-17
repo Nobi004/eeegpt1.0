@@ -79,7 +79,7 @@ def main():
         f"""
         <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
         <div style="display: flex; justify-content: flex-end;">
-            <h3 style='text-align: left;'>made by Md. Mahmudun Nobi</h3>
+            <h3 style='text-align: left;'>Creator: Md. Mahmudun Nobi</h3>
             <img src="data:image/jpg;base64,{b64_string}" alt="Profile" style="
                 width: 130px;
                 height: 130px;
@@ -93,14 +93,13 @@ def main():
         </div>
         <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
         """, unsafe_allow_html=True)
-    # st.markdown(
-    #     """
-    #     <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
-    #     <h3 style='text-align: center;'>Made by Md. Mahmudun Nobi</h3>
-    #     <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
-    #     """,
-    #     unsafe_allow_html=True
-    # )
+    st.markdown(
+        """
+        <h3 style='text-align: center;'>mdmnb435@gmail.com</h3>
+        <h5 style='text-align: left;'>Still in development phase,If you have any suggession please give me feedback through mail.</h5>
+        """,
+        unsafe_allow_html=True
+    )
     # st.title("Welcme to EEEGPT v1.0")
     # st.subheader("Made by Md. Mahmudun Nobi")
     # st.subheader("Your AI Assistant for Electrical and Electronic Engineering study.")
