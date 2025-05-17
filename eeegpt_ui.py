@@ -72,7 +72,7 @@ class GroqLLM(LLM):
         }
 
 def main():
-    with open("images/logo.jpg", "rb") as img_file:
+    with open("images/logo.png", "rb") as img_file:
         b64_string = base64.b64encode(img_file.read()).decode()
 
     st.markdown(
@@ -85,7 +85,7 @@ def main():
                 height: 130px;
                 object-fit: cover;
                 border-radius: 50%;
-                border: 2px solid #ddd;
+                border: 3px solid #ddd;
                 margin-top: 10px;
                 margin-right: 10px;
                 align:right;
