@@ -6,7 +6,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.llms.base import LLM
 from typing import Any, List, Mapping, Optional
-
+import base64
 
 HUGGING_FACE_REPO_ID = "llama3-8b-8192"
 GROQ_API_KEY = "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"
@@ -72,30 +72,35 @@ class GroqLLM(LLM):
         }
 
 def main():
+    with open("images/logo.jpg", "rb") as img_file:
+        b64_string = base64.b64encode(img_file.read()).decode()
+
     st.markdown(
-        """
+        f"""
+        <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
         <div style="display: flex; justify-content: flex-end;">
-            <img src="images\profile.jpg" alt="Profile" style="
-                width: 100px;
-                height: 100px;
+            <h3 style='text-align: left;'>made by Md. Mahmudun Nobi</h3>
+            <img src="data:image/jpg;base64,{b64_string}" alt="Profile" style="
+                width: 130px;
+                height: 130px;
                 object-fit: cover;
                 border-radius: 50%;
                 border: 2px solid #ddd;
                 margin-top: 10px;
                 margin-right: 10px;
+                align:right;
             ">
         </div>
-        """,
-        unsafe_allow_html=True
-    )
-    st.markdown(
-        """
-        <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
-        <h3 style='text-align: center;'>Made by Md. Mahmudun Nobi</h3>
         <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
-        """,
-        unsafe_allow_html=True
-    )
+        """, unsafe_allow_html=True)
+    # st.markdown(
+    #     """
+    #     <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
+    #     <h3 style='text-align: center;'>Made by Md. Mahmudun Nobi</h3>
+    #     <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
+    #     """,
+    #     unsafe_allow_html=True
+    # )
     # st.title("Welcme to EEEGPT v1.0")
     # st.subheader("Made by Md. Mahmudun Nobi")
     # st.subheader("Your AI Assistant for Electrical and Electronic Engineering study.")
