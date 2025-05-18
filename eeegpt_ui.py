@@ -74,17 +74,19 @@ class GroqLLM(LLM):
 def main():
     # Add logo at the top
     with open("images/logo.png", "rb") as logo_file:
-        logo_b64 = base64.b64encode(logo_file.read()).decode()
+      logo_b64 = base64.b64encode(logo_file.read()).decode()
     st.markdown(
         f"""
         <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
-            <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="
-                width: 120px;
-                height: 120px;
-                border-radius: 25px;
-                object-fit: cover;
-                border: 2px solid #2196f3;
-            ">
+            <a href="/" style="text-decoration: none;">
+                <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 25px;
+                    object-fit: cover;
+                    border: 2px solid #2196f3;
+                ">
+            </a>
         </div>
         """,
         unsafe_allow_html=True
@@ -95,30 +97,30 @@ def main():
         b64_string = base64.b64encode(img_file.read()).decode()
 
     st.markdown(
-    f"""
-    <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
-    <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="text-align: left;">
-            <h3 style='margin-bottom: 0.2em;'>
-                Creator: Md. Mahmudun Nobi<br>
-                Mail: mdmnb435@gmail.com<br>
-                Github: <a href="https://github.com/Nobi004" target="_blank">Nobi004</a>
-            </h3>
+        f"""
+        <h1 style='text-align: center; color: #2196f3;'>Welcome to EEEGPT v1.0</h1>
+        <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="text-align: left;">
+                <h3 style='margin-bottom: 0.2em;'>
+                    Creator: Md. Mahmudun Nobi<br>
+                    Mail: mdmnb435@gmail.com<br>
+                    Github: <a href="https://github.com/Nobi004" target="_blank">Nobi004</a>
+                </h3>
+            </div>
+            <div>
+                <img src="data:image/jpg;base64,{b64_string}" alt="Profile" style="
+                    width: 130px;
+                    height: 130px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 3px solid #2196f3;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                ">
+            </div>
         </div>
-        <div>
-            <img src="data:image/jpg;base64,{b64_string}" alt="Profile" style="
-                width: 130px;
-                height: 130px;
-                object-fit: cover;
-                border-radius: 50%;
-                border: 3px solid #2196f3;
-                margin-top: 10px;
-                margin-right: 10px;
-            ">
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
     st.markdown(
         """
         <h5 style='text-align: left;'>Still in development phase,If you have any suggession please give me feedback through mail.</h5>
