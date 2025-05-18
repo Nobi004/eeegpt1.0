@@ -76,10 +76,16 @@ def main():
         b64_string = base64.b64encode(img_file.read()).decode()
 
     st.markdown(
-        f"""
-        <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
-        <div style="display: flex; justify-content: flex-end;">
-            <h3 style='text-align: left;'>Creator: Md. Mahmudun Nobi</h3>
+    f"""
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="text-align: left;">
+            <h3 style='margin-bottom: 0.2em;'>
+                Creator: Md. Mahmudun Nobi<br>
+                Mail: mdmnb435@gmail.com<br>
+                Github: <a href="https://github.com/Nobi004" target="_blank">Nobi004</a>
+            </h3>
+        </div>
+        <div>
             <img src="data:image/jpg;base64,{b64_string}" alt="Profile" style="
                 width: 130px;
                 height: 130px;
@@ -88,14 +94,14 @@ def main():
                 border: 3px solid #ddd;
                 margin-top: 10px;
                 margin-right: 10px;
-                align:right;
             ">
         </div>
-        <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
-        """, unsafe_allow_html=True)
+    </div>
+    <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
+    <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
+    """, unsafe_allow_html=True)
     st.markdown(
         """
-        <h3 style='text-align: center;'>mdmnb435@gmail.com</h3>
         <h5 style='text-align: left;'>Still in development phase,If you have any suggession please give me feedback through mail.</h5>
         """,
         unsafe_allow_html=True
