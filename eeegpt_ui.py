@@ -77,6 +77,8 @@ def main():
 
     st.markdown(
     f"""
+    <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
+    <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <div style="text-align: left;">
             <h3 style='margin-bottom: 0.2em;'>
@@ -97,8 +99,7 @@ def main():
             ">
         </div>
     </div>
-    <h1 style='text-align: center;'>Welcome to EEEGPT v1.0</h1>
-    <h4 style='text-align: center;'>Your AI Assistant for Electrical and Electronic Engineering study.</h4>
+    
     """, unsafe_allow_html=True)
     st.markdown(
         """
