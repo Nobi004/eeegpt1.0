@@ -72,7 +72,26 @@ class GroqLLM(LLM):
         }
 
 def main():
-    with open("images/logo.png", "rb") as img_file:
+    # Add logo at the top
+    with open("images/logo.png", "rb") as logo_file:
+        logo_b64 = base64.b64encode(logo_file.read()).decode()
+    st.markdown(
+        f"""
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+            <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="
+                width: 120px;
+                height: 120px;
+                border-radius: 25px;
+                object-fit: cover;
+                border: 2px solid #2196f3;
+            ">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Add profile image and header section
+    with open("images/profile.png", "rb") as img_file:
         b64_string = base64.b64encode(img_file.read()).decode()
 
     st.markdown(
@@ -93,13 +112,12 @@ def main():
                 height: 130px;
                 object-fit: cover;
                 border-radius: 50%;
-                border: 3px solid #ddd;
+                border: 3px solid #2196f3;
                 margin-top: 10px;
                 margin-right: 10px;
             ">
         </div>
     </div>
-    
     """, unsafe_allow_html=True)
     st.markdown(
         """
