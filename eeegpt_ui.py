@@ -9,7 +9,7 @@ from typing import Any, List, Mapping, Optional
 import base64
 
 HUGGING_FACE_REPO_ID = "llama3-8b-8192"
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 DB_FAISS_PATH = "vectorstore/db_faiess"
 @st.cache_resource
 
